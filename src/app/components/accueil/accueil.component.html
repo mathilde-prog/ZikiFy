@@ -1,0 +1,120 @@
+<!-- Bloc d'affichage de l'ACCUEIL -->
+<div *ngIf="isVisibleAccueil">
+    <div class="bienvenue"> Bienvenue sur ZikiFy </div> <button class="btn-default animation-on-hover" type="button" (click)="loginSpotify();">CONNEXION À SPOTIFY</button> <!-- Bouton de connexion à Spotify -->
+    <br> <br> 
+    <div class="row">
+        <div class="col-lg-6"> 
+          <div class="card card-chart">
+            <button class="btn-default animation-on-hover" type="button" (click)="accederSpotify();">
+              <!-- Si l'utilisateur s'est connecté à Spotify alors on lui y autorise l'accès -->
+              <div *ngIf="isConnected" class="carte-spotify"> 
+                <div class="card-header">
+                  <div class="titre-carte"> Spotify </div>
+                </div>
+                <div class="card-body">
+                  <div class="contenu-carte"> Ecoutez vos musiques et obtenez des informations sur celles-ci ! </div>
+                  <br>
+                </div>
+              </div>
+              <!-- Si l'utlisateur ne s'est pas connexté à Spotify alors il aura accès à la partie Youtube du site -->
+              <div *ngIf="!isConnected" class="carte-concert"> 
+                <div class="card-header">
+                  <div class="titre-carte"> Youtube </div>
+                </div>
+                <div class="card-body">
+                  <div class="contenu-carte"> Regardez les clips de vos chansons favorites ! </div>
+                  <br>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>  
+    <!-- Bloc pour accéder à la partie LYRICS -->  
+    <div class="col-lg-6">
+            <div class="card card-chart">
+                <button class="btn-default animation-on-hover" type="button" (click)="accederLyrics();">
+                  <div class="carte-lyrics">
+                    <div class="card-header">
+                      <div class="titre-carte">Lyrics</div>
+                    </div>
+                    <div class="card-body">
+                      <div class="contenu-carte"> Accédez aux paroles de chansons du monde entier ! </div>
+                      <br>
+                    </div>
+                  </div>
+                </button>
+              </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Bloc pour accéder à la partie INFOS -->
+        <div class="col-lg-6">
+            <div class="card card-chart">
+                <button class="btn-default animation-on-hover" type="button" (click)="accederInfos();">
+                <div class= carte-infos>
+                    <div class="card-header">
+                        <div class="titre-carte">Infos</div>
+                    </div>
+                    <div class="card-body">
+                     <div class = contenu-carte> Obtenez des informations sur vos artistes favoris ! </div>
+                     <br>
+                    </div>
+                </div>
+            </button>
+            </div>
+        </div>
+        <!-- Bloc pour accéder à la partie CONCERT -->
+        <div class="col-lg-6">
+              <div class="card card-chart">
+                <button class="btn-default animation-on-hover" type="button" (click)="accederConcert();">
+                  <div *ngIf="isConnected"> 
+                    <div class= carte-concert>
+                      <div class="card-header">
+                        <div class="titre-carte">Concert</div>
+                      </div>
+                      <div class="card-body">
+                        <div class = contenu-carte>Retrouvez les concerts de vos artistes préférés ! </div>
+                        <br>
+                      </div>
+                    </div>
+                  </div>
+                  <div *ngIf="!isConnected"> 
+                    <div class= carte-spotify>
+                      <div class="card-header">
+                        <div class="titre-carte">Concert</div>
+                      </div>
+                      <div class="card-body">
+                        <div class = contenu-carte>Retrouvez les concerts de vos artistes préférés ! </div>
+                        <br>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+        </div>
+      </div>
+</div>
+<!-- Bloc d'affichage de SPOTIFY -->
+<form *ngIf="isVisibleSpotify">
+    <app-spotify [token]="token" [isConnected]="isConnected"></app-spotify>
+</form>
+<!-- Bloc d'affichage des CONCERTS -->
+<form *ngIf="isVisibleConcert">
+  <app-concert></app-concert>
+</form>
+<!-- Bloc d'affichage des LYRICS -->
+<form *ngIf="isVisibleLyrics">
+    <app-lyrics></app-lyrics>
+</form>
+<!-- Bloc d'affichage des INFOS -->
+<form *ngIf="isVisibleInfos">
+  <app-infos ></app-infos>
+</form>
+<!-- Bloc d'affichage du formulaire de CONTACT -->
+<form *ngIf="isVisibleContact">
+  <app-contact></app-contact>
+</form>
+<!-- Bloc d'affichage du A PROPOS -->
+<form *ngIf="isVisibleAPropos">
+  <app-apropos></app-apropos>
+</form>

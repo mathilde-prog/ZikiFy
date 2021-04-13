@@ -1,0 +1,18 @@
+<!-- Affichage de la page de Infos -->
+<div class="card-body">
+    <h4 class="card-title" id="titreCartes">Envie de connaitre des informations sur un artiste ?</h4><br>  
+    <br>     
+    <!-- Saisit du nom de l'artiste -->
+    <h4 id="texteSaisie"> Nom de l'artiste :
+      <input id="artiste"  required> </h4>
+    <br>
+    <!-- Saisit du type de l'artiste : groupe ou personne -->
+    <h4 id="texteSaisie"> Type de l'artiste (groupe : 'Band' ou personne : 'Person') :
+        <input id="typeArtiste"  required> </h4>
+      <br> 
+    <!-- Bouton pour obtenir lncer la recherche d'informations -->
+    <button class="btn btn-success animation-on-hover" type="button"  (click)="findInfos();"> Obtenir des informations</button>
+</div>
+<br>
+<!-- Emplacement du résultat de la recherche -->
+<ul id="bands"></ul>

@@ -1,0 +1,53 @@
+<div class = "row">
+  <div class="col-lg-3">
+        <!-- Bloc d'affichage pour permettre à l'utilisateur de chercher les paroles d'une chanson -->
+        <div class="card text-center" style="width: 30rem;">
+            <div class="card-body">
+              <h4 class="card-title" id="titreCartes">Envie de connaitre les paroles d'une chanson ?</h4><br>  
+              <h6 class="card-subtitle mb-2 text-muted">Soyez précis dans l'orthographe</h6>
+              <br>    
+              <!-- Saisie de l'artiste --> 
+              <h4 id="texteSaisie"> Saisir l'artiste :
+                <input id="artiste"  required> </h4>
+              <br>
+              <!-- Saisie du titre de la chanson -->
+              <h4 id="texteSaisie">  Saisir le titre : 
+              <input id="titre" required> </h4>
+              <br>
+              <!-- Bouton pour chercher les paroles de la chanson -->
+              <button class="btn btn-success animation-on-hover" type="button"  (click)="findLyrics();"> Chercher les paroles</button>
+            </div>
+        </div>
+
+        <!-- Bloc d'affichage pour permettre à l'utilisateur de chercher des suggestions -->
+        <div class="card text-center" style="width: 30rem;">
+          <div class="card-body">
+                <h4 class="card-title" id="titreCartes">Besoin d'une suggestion ?</h4>
+                <!-- Saisie du titre et/ou d'un artiste -->
+                <h4 id="texteSaisie"> Saisir un titre et/ou un artiste : <input id="rechercheSuggestionInput" required> </h4>
+                <!-- Liste non-ordonnée où apparaîtront les suggestions -->
+                <ul class="suggestions" id="suggestions"></ul>
+                <!-- Bouton pour chercher les suggestions -->
+               <button class="btn btn-success animation-on-hover" type="button"  (click)="findSuggestions();"> Chercher suggestions </button>               
+              </div>
+      </div>
+  </div>
+</div>
+  <!--Bloc pour l'affichage des paroles de la chanson recherchée par l'utilisateur  -->
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="card text-center" style="width: 60rem;">
+              <div class="card-body">
+                <h4 class="card-title" id="titreCarteParoles">Paroles</h4>
+                <!-- Zone d'affichage des paroles de la chanson -->
+                <p class="card-text" id="paroles">
+                  <i class="tim-icons icon-double-right"></i>
+                  Les paroles de la chanson recherchée apparaîtront ici. 
+                </p>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+

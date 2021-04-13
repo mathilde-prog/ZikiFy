@@ -1,0 +1,72 @@
+.bienvenue{
+    color: white;
+    font-size: 60px;
+    text-align: center; 
+    font-weight: bold; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.carte-concert{
+    background-color: #d67972;
+    background: #ce584f;
+    background: -webkit-linear-gradient(0deg, #ce584f 0%,#d67972 100%);
+    background: -o-linear-gradient(0deg, #ce584f 0%,#d67972 100%);
+    background: -moz-linear-gradient(0deg, #ce584f 0%,#d67972 100%);
+    background: linear-gradient(0deg, #ce584f 0%, #d67972 100%);
+}
+
+.carte-concert:hover {
+    border: 2mm solid rgba($color: #0099ff, $alpha: 1.0);
+}
+
+.carte-infos{    
+    background-color: #f8f88e;
+    background: #f0f04e;
+    background: -webkit-linear-gradient(0deg, #f0f04e 0%, #f8f88e 100%);
+    background: -o-linear-gradient(0deg, #f0f04e 0%, #f8f88e 100%);
+    background: -moz-linear-gradient(0deg, #f0f04e 0%, #f8f88e 100%);
+    background: linear-gradient(0deg, #f0f04e 0%, #f8f88e 100%);
+}
+
+.carte-infos:hover {
+    border: 2mm solid rgba($color: #0099ff, $alpha: 1.0);
+}
+
+.carte-lyrics {
+    background: #0f87a5;
+    background: -webkit-linear-gradient(0deg, #0f87a5 0%, #91c8d6 100%);
+    background: -o-linear-gradient(0deg, #0f87a5 0%, #91c8d6 100%);
+    background: -moz-linear-gradient(0deg, #0f87a5 0%, #91c8d6 100%);
+    background: linear-gradient(0deg, #0f87a5 0%, #91c8d6 100%);
+}
+
+.carte-lyrics:hover {
+    border: 2mm solid rgba($color: #0099ff, $alpha: 1.0);
+}
+
+.carte-spotify {
+    background: #7bce44;
+    background: -webkit-linear-gradient(0deg, #7bce44 0%, #b2e292 100%);
+    background: -o-linear-gradient(0deg, #7bce44 0%, #b2e292 100%);
+    background: -moz-linear-gradient(0deg, #7bce44 0%, #b2e292 100%);
+    background: linear-gradient(0deg, #7bce44 0%, #b2e292 100%);
+}
+
+.carte-spotify:hover {
+    border: 2mm solid rgba($color: #0099ff, $alpha: 1.0);
+}
+
+.contenu-carte{
+    color: black;
+    font-size: 15px;
+    text-align: center; 
+    font-weight: bold; 
+}
+
+.titre-carte{
+    font-size: 30px;
+    color: black;
+    text-decoration: underline; 
+    text-align: center; 
+    font-weight: bold;
+}

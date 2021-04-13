@@ -1,0 +1,70 @@
+/* Make Spotify Songs Look More Round */
+  iframe {
+    border-radius: 5px;
+  }
+  #videos {
+    color: white; 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center; 
+    font-size: 20px; 
+  }
+  /* Make the Spotify Results Fall Into the Same Row */
+  .col {
+    display: inline-block;
+    //    display: inline-block !important;
+
+  }
+  #song-list {
+    position: absolute;
+    top: 20%; left: 10%;
+  }.recherche {
+    position: absolute;
+    top: 30%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 40px;
+    padding: 10px;
+  }
+  .recherche:hover > .recherche-txt
+  {
+    width: 240px;
+    padding: 0 6px;
+  }
+  .recherche:hover > .recherche-btn {
+    background: white;
+    color: black;
+  }
+  .recherche-btn {
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    color: #1DB954;
+    cursor: pointer;
+  }
+  .recherche-btn > i
+  {
+    font-size: 18px;
+  }
+  .recherche-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #333;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    font-weight: bold;
+  }
+  .btn-primary{
+      background: #fff;
+      color: #CB356B;
+      border: none;
+  }

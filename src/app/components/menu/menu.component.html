@@ -1,0 +1,119 @@
+<!-- Affichage du menu de gauche -->
+<div class="sidebar" data="grey">
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+            <!-- Accueil -->
+            <li *ngIf="activeAccueil" class="active ">
+                <a (click)="activerAccueil();">
+                    <i class="tim-icons icon-app"></i>
+                    <p>Accueil</p>
+                </a>
+            </li>
+            <li *ngIf="!activeAccueil">
+                <a (click)="activerAccueil();">
+                    <i class="tim-icons icon-app"></i>
+                    <p>Accueil</p>
+                </a>
+            </li>
+            
+            <!-- Spotify -->
+            <li *ngIf="activeSpotify && isConnected" class="active">
+                <a (click)="activerSpotify();">
+                    <i class="tim-icons icon-headphones"></i>
+                    <p>Spotify</p>
+                </a>
+            </li>
+            <li *ngIf="!activeSpotify && isConnected">
+                <a (click)="activerSpotify();">
+                    <i class="tim-icons icon-headphones"></i>
+                    <p>Spotify</p>
+                </a>
+            </li>
+
+            <!-- Youtube -->
+            <li *ngIf="activeSpotify && !isConnected" class="active">
+                <a (click)="activerSpotify();">
+                    <i class="tim-icons icon-headphones"></i>
+                    <p>Youtube</p>
+                </a>
+            </li>
+            <li *ngIf="!activeSpotify && !isConnected">
+                <a (click)="activerSpotify();">
+                    <i class="tim-icons icon-headphones"></i>
+                    <p>Youtube</p>
+                </a>
+            </li>
+
+            <!-- Lyrics -->
+            <li *ngIf="activeLyrics" class="active">
+                <a (click)="activerLyrics();">
+                    <i class="tim-icons icon-paper"></i>
+                    <p>Lyrics</p>
+                </a>            
+            </li>
+            <li *ngIf="!activeLyrics">
+                <a (click)="activerLyrics();">
+                    <i class="tim-icons icon-paper"></i>
+                    <p>Lyrics</p>
+                </a>
+            </li>
+
+            <!-- Infos -->
+            <li *ngIf="activeInfos" class="active">
+                <a (click)="activerInfos();">
+                   <i class="tim-icons icon-zoom-split"></i>
+                    <p>Infos</p>
+                </a>
+            </li>
+
+            <li *ngIf="!activeInfos">
+                <a (click)="activerInfos();">
+                    <i class="tim-icons icon-zoom-split"></i>
+                    <p>Infos</p>
+                </a>
+            </li>
+
+            <!-- Concerts -->
+            <li *ngIf="activeConcert" class="active">
+                <a (click)="activerConcert();">
+                    <i class="tim-icons icon-calendar-60"></i>
+                    <p>Concerts</p>
+                </a>
+            </li>
+
+            <li *ngIf="!activeConcert">
+                <a (click)="activerConcert();">
+                    <i class="tim-icons icon-calendar-60"></i>
+                    <p>Concerts</p>
+                </a>
+            </li>
+
+            <!-- Contact -->
+            <li *ngIf="activeContact" class="active">
+                <a (click)="activerContact();">
+                    <i class="tim-icons icon-send"></i>
+                    <p>Contact</p>
+                </a>
+            </li>
+            <li *ngIf="!activeContact">
+                <a (click)="activerContact();">
+                    <i class="tim-icons icon-send"></i>
+                    <p>Contact</p>
+                </a>
+            </li>
+
+            <!-- A propos -->
+            <li *ngIf="activeAPropos" class="active">
+                <a (click)="activerAPropos();">
+                    <i class="tim-icons icon-pin"></i>
+                    <p>A propos</p>
+                </a>
+            </li>
+            <li *ngIf="!activeAPropos">
+                <a (click)="activerAPropos();">
+                    <i class="tim-icons icon-pin"></i>
+                    <p>A propos</p>
+                </a>
+            </li>
+        </ul>
+</div>

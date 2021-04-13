@@ -1,0 +1,62 @@
+<div class="col-lg-8">
+  <!-- Si on est connecté on affiche Spotify -->
+  <div *ngIf="isConnected"> 
+    <div class="card card-chart">
+      <div class="card-header">
+        <!-- Recherche des sons -->
+        <h4> <div id="nom_user">  </div> </h4>
+        <h3> Saisir artiste / titre : &nbsp; <input id="son"  required> &nbsp; &nbsp; &nbsp; <button class="btn btn-success animation-on-hover" type="button"  (click)="chercherSons();"> Rechercher </button> </h3> 
+      </div>
+      <!-- Relié au javascript permettant de charger les résultats de la requête -->
+      <div class="container">
+        <div class="row">
+          <div id="song_0" class="col"></div>
+          <div id="song_1" class="col"></div>
+        </div>
+        <div class="row">
+          <div id="song_2" class="col"></div>
+          <div id="song_3" class="col"></div>
+        </div>
+        <div class="row">
+          <div id="song_4" class="col"></div>
+          <div id="song_5" class="col"></div>
+        </div>
+        <div class="row">
+          <div id="song_6" class="col"></div>
+          <div id="song_7" class="col"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sinon Youtube -->
+  <div *ngIf="!isConnected"> 
+    <div class = "col-lg-8">
+      <div class="card text-center" style="width: 30rem;">
+        <div class="card-body">
+          <div class="card-header">
+            <h2 class="card-title">Youtube</h2>
+          </div> 
+          <br>
+            <!-- Entrée utilisateur de l'artiste -->
+            <h4 id="texteSaisie"> Saisir l'artiste :
+              <input id="artiste"  required> </h4>
+            <br>
+            <!-- Entrée utilisateur du titre -->
+            <h4 id="texteSaisie">  Saisir le titre : 
+            <input id="titre" required> </h4>
+            <br>
+            <!-- Envoie de la requête auprès de Youtube -->
+            <button class="btn btn-success animation-on-hover" type="button"  (click)="clipYouTube();"> Trouver le clip YouTube</button>       
+            
+            <!-- Affichage vidéos YouTube -->
+            <div class="videos" id="videos">
+                <br>  
+                <i class="tim-icons icon-double-right"></i>
+                Bon visionnage !
+             </div>
+        </div>    
+      </div>
+    </div>
+  </div>
+
+</div>
