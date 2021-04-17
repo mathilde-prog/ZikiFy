@@ -7,7 +7,7 @@ Projet réalisé dans le cadre des modules "Architectures logicielles pour le d�
 * Nathan TESSIER 
 * Mathilde MOTTAY 
 
-# Lien pour accéder au site 
+## Lien pour accéder au site 
 https://zikify.github.io/
 
 ## Objectif 
