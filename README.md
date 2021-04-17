@@ -1,10 +1,14 @@
 # Application Web ZikiFy 
 
 Projet réalisé dans le cadre des modules "Architectures logicielles pour le développement d'applications Web" et "Interfaces Homme-Machines".
+
 ## Membres du groupe 
 * Anaïs MOTTIER 
 * Nathan TESSIER 
 * Mathilde MOTTAY 
+
+# Lien pour accéder au site 
+https://zikify.github.io/
 
 ## Objectif 
 Définir une application Web ayant les caractéristiques suivantes :
